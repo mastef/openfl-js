@@ -1,0 +1,8 @@
+
+-js ../../src/_.js
+OpenFL
+-lib lime
+-lib openfl
+-lib modular-js
+-D lime-opengl
+-D html5
