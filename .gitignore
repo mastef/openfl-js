@@ -1,3 +1,4 @@
 *.DS_Store
 src/**/*.js
 src/**/*.d.ts
+npm-debug.log
