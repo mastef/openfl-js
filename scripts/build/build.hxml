@@ -4,5 +4,6 @@ Import
 -lib lime
 -lib openfl
 -lib modular-js
+-D openfljs
 -D lime-opengl
 -D html5
