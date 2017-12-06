@@ -1,6 +1,6 @@
 
 -js ../../src/_.js
-OpenFL
+Import
 -lib lime
 -lib openfl
 -lib modular-js
