@@ -3,7 +3,8 @@
 Import
 -lib lime
 -lib openfl
--lib modular-js
+-lib hxgenjs
 -D openfljs
 -D lime-opengl
+-D es5get
 -D html5
