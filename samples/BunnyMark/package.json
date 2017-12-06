@@ -1,0 +1,10 @@
+{
+	"name": "bunnymark",
+	"version": "1.0.0",
+	"dependencies": {
+		"openfl": "*"
+	},
+	"scripts": {
+		"build": "browserify entry.js --debug > bundle.js"
+	}
+}
