@@ -1,0 +1,10 @@
+{
+	"name": "helloworld",
+	"version": "1.0.0",
+	"dependencies": {
+		"openfl": "*"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json && browserify entry.js --debug > bundle.js"
+	}
+}
