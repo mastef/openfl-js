@@ -21,6 +21,7 @@
 		"Joshua Granick",
 		"Other OpenFL contributors"
 	],
+	"main": "src/openfl/",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/openfl/openfl-js.git"
