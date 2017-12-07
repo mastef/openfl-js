@@ -1,7 +1,7 @@
-import Sprite from "openfl/src/openfl/display/Sprite";
-import Loader from "openfl/src/openfl/display/Loader";
-import URLRequest from "openfl/src/openfl/net/URLRequest";
-import Event from "openfl/src/openfl/events/Event";
+import Sprite from "openfl/display/Sprite";
+import Loader from "openfl/display/Loader";
+import URLRequest from "openfl/net/URLRequest";
+import Event from "openfl/events/Event";
 
 
 export class Main extends Sprite {

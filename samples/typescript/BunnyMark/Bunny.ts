@@ -1,4 +1,4 @@
-import Tile from "openfl/src/openfl/display/Tile";
+import Tile from "openfl/display/Tile";
 
 
 export class Bunny extends Tile {

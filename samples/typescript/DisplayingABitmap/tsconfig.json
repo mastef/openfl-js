@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
 		"target": "es5",
-		// "baseUrl": ".",
-		// "paths": {
-		//   "openfl/*": ["node_modules/openfl/src/openfl/*"]
-		// }
+		"baseUrl": ".",
+		"paths": {
+			"openfl/*": ["node_modules/openfl/src/openfl/*"]
+		}
 	},
 	"files": [
 		"entry.ts"

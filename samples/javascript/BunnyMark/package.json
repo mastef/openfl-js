@@ -1,10 +1,12 @@
 {
-	"name": "bunnymark",
-	"version": "1.0.0",
-	"dependencies": {
-		"openfl": "*"
-	},
-	"scripts": {
-		"build": "browserify entry.js --debug > bundle.js"
-	}
+  "name": "bunnymark",
+  "version": "1.0.0",
+  "devDependencies": {
+    "openfl": "*",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "build": "webpack --devtool source-map entry.js bundle.js",
+    "test": "npm run build && http-server -c-1 --cors"
+  }
 }

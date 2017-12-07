@@ -22,14 +22,14 @@ class Main {
 
 
 // TODO: Automatically generate extern classes using hxgenjs
-@:jsRequire("openfl/src/openfl/display/BitmapData", "default")
+@:jsRequire("openfl/display/BitmapData", "default")
 extern class BitmapData {
 	var image:Dynamic;
 	function new(width:Int, height:Int, transparent:Bool, color:Int);
 	function fillRect(rect:Rectangle, color:Int):Void;
 }
 
-@:jsRequire("openfl/src/openfl/geom/Rectangle", "default")
+@:jsRequire("openfl/geom/Rectangle", "default")
 extern class Rectangle {
 	function new(x:Float, y:Float, width:Float, height:Float);
 }

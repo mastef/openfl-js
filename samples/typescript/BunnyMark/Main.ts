@@ -1,11 +1,11 @@
-import Sprite from "openfl/src/openfl/display/Sprite";
-import Loader from "openfl/src/openfl/display/Loader";
-import URLRequest from "openfl/src/openfl/net/URLRequest";
-import Event from "openfl/src/openfl/events/Event";
-import BitmapData from "openfl/src/openfl/display/BitmapData";
-import MouseEvent from "openfl/src/openfl/events/MouseEvent";
-import Tilemap from "openfl/src/openfl/display/Tilemap";
-import Tileset from "openfl/src/openfl/display/Tileset";
+import Sprite from "openfl/display/Sprite";
+import Loader from "openfl/display/Loader";
+import URLRequest from "openfl/net/URLRequest";
+import Event from "openfl/events/Event";
+import BitmapData from "openfl/display/BitmapData";
+import MouseEvent from "openfl/events/MouseEvent";
+import Tilemap from "openfl/display/Tilemap";
+import Tileset from "openfl/display/Tileset";
 import Bunny from "./Bunny";
 
 
@@ -13,7 +13,7 @@ export class Main extends Sprite {
 	
 	
 	private addingBunnies:boolean;
-	private bunnies:Bunny[];
+	private bunnies:Array<Bunny>;
 	//private fps:FPS;
 	private gravity:number;
 	private minX:number;

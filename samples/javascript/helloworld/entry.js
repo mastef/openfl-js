@@ -1,5 +1,5 @@
-var BitmapData = require ("openfl/src/openfl/display/BitmapData").default;
-var Rectangle = require ("openfl/src/openfl/geom/Rectangle").default;
+var BitmapData = require ("openfl/display/BitmapData").default;
+var Rectangle = require ("openfl/geom/Rectangle").default;
 
 //
 

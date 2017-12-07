@@ -1,5 +1,5 @@
-import BitmapData from "openfl/src/openfl/display/BitmapData";
-import Rectangle from "openfl/src/openfl/geom/Rectangle";
+import BitmapData from "openfl/display/BitmapData";
+import Rectangle from "openfl/geom/Rectangle";
 
 //
 

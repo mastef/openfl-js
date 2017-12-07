@@ -15,7 +15,7 @@ var Bunny = function() {
 Bunny.__super__ = Tile;
 Bunny.prototype = $extend(Tile.prototype,{
 });
-var Sprite = require("openfl/src/openfl/display/Sprite").default;
+var Sprite = require("openfl/display/Sprite").default;
 var Main = function() {
 	var _gthis = this;
 	Sprite.call(this);
@@ -112,13 +112,13 @@ Main.prototype = $extend(Sprite.prototype,{
 		console.log(this.bunnies.length + " bunnies");
 	}
 });
-var Application = require("openfl/src/openfl/display/Application").default;
-var Loader = require("openfl/src/openfl/display/Loader").default;
-var URLRequest = require("openfl/src/openfl/net/URLRequest").default;
-var Event = require("openfl/src/openfl/events/Event").default;
-var MouseEvent = require("openfl/src/openfl/events/MouseEvent").default;
-var Tilemap = require("openfl/src/openfl/display/Tilemap").default;
-var Tileset = require("openfl/src/openfl/display/Tileset").default;
+var Application = require("openfl/display/Application").default;
+var Loader = require("openfl/display/Loader").default;
+var URLRequest = require("openfl/net/URLRequest").default;
+var Event = require("openfl/events/Event").default;
+var MouseEvent = require("openfl/events/MouseEvent").default;
+var Tilemap = require("openfl/display/Tilemap").default;
+var Tileset = require("openfl/display/Tileset").default;
 var $_, $fid = 0;
 function $bind(o,m) { if( m == null ) return null; if( m.__id__ == null ) m.__id__ = $fid++; var f; if( o.hx__closures__ == null ) o.hx__closures__ = {}; else f = o.hx__closures__[m.__id__]; if( f == null ) { f = function(){ return f.method.apply(f.scope, arguments); }; f.scope = o; f.method = m; o.hx__closures__[m.__id__] = f; } return f; }
 Main.main();

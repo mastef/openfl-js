@@ -221,7 +221,7 @@ class Main extends Sprite {
 
 
 // TODO: Automatically generate extern classes using hxgenjs
-@:jsRequire("openfl/src/openfl/display/Application", "default")
+@:jsRequire("openfl/display/Application", "default")
 extern class Application {
 	var window:Dynamic;
 	function new ();
@@ -229,14 +229,14 @@ extern class Application {
 	function exec ():Int;
 }
 
-@:jsRequire("openfl/src/openfl/display/Sprite", "default")
+@:jsRequire("openfl/display/Sprite", "default")
 extern class Sprite {
 	var stage:Dynamic;
 	function new ();
 	function addChild (child:Dynamic):Void;
 }
 
-@:jsRequire("openfl/src/openfl/display/Loader", "default")
+@:jsRequire("openfl/display/Loader", "default")
 extern class Loader {
 	var contentLoaderInfo:Dynamic;
 	var content:Dynamic;
@@ -244,12 +244,12 @@ extern class Loader {
 	function load (request:URLRequest):Void;
 }
 
-@:jsRequire("openfl/src/openfl/net/URLRequest", "default")
+@:jsRequire("openfl/net/URLRequest", "default")
 extern class URLRequest {
 	function new (url:String);
 }
 
-@:jsRequire("openfl/src/openfl/events/Event", "default")
+@:jsRequire("openfl/events/Event", "default")
 extern class Event {
 	static var COMPLETE:String;
 	static var ENTER_FRAME:String;
@@ -257,26 +257,26 @@ extern class Event {
 	function new ();
 }
 
-@:jsRequire("openfl/src/openfl/events/MouseEvent", "default")
+@:jsRequire("openfl/events/MouseEvent", "default")
 extern class MouseEvent extends Event {
 	static var MOUSE_UP:String;
 	static var MOUSE_DOWN:String;
 	function new ();
 }
 
-@:jsRequire("openfl/src/openfl/display/Tilemap", "default")
+@:jsRequire("openfl/display/Tilemap", "default")
 extern class Tilemap {
 	function new (width:Float, height:Float, tileset:Tileset);
 	function addTile (tile:Dynamic):Void;
 }
 
-@:jsRequire("openfl/src/openfl/display/Tileset", "default")
+@:jsRequire("openfl/display/Tileset", "default")
 extern class Tileset {
 	function new (bitmapData:BitmapData);
 	function addRect (rect:Dynamic):Void;
 }
 
-@:jsRequire("openfl/src/openfl/display/BitmapData", "default")
+@:jsRequire("openfl/display/BitmapData", "default")
 extern class BitmapData {
 	var rect:Dynamic;
 	function new ();

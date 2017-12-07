@@ -99,7 +99,7 @@ class Main extends Sprite {
 
 
 // TODO: Automatically generate extern classes using hxgenjs
-@:jsRequire("openfl/src/openfl/display/Application", "default")
+@:jsRequire("openfl/display/Application", "default")
 extern class Application {
 	var window:Dynamic;
 	function new ();
@@ -107,26 +107,26 @@ extern class Application {
 	function exec ():Int;
 }
 
-@:jsRequire("openfl/src/openfl/display/Sprite", "default")
+@:jsRequire("openfl/display/Sprite", "default")
 extern class Sprite {
 	var stage:Dynamic;
 	function new ();
 	function addChild (child:Dynamic):Void;
 }
 
-@:jsRequire("openfl/src/openfl/display/Loader", "default")
+@:jsRequire("openfl/display/Loader", "default")
 extern class Loader {
 	var contentLoaderInfo:Dynamic;
 	function new ();
 	function load (request:URLRequest):Void;
 }
 
-@:jsRequire("openfl/src/openfl/net/URLRequest", "default")
+@:jsRequire("openfl/net/URLRequest", "default")
 extern class URLRequest {
 	function new (url:String);
 }
 
-@:jsRequire("openfl/src/openfl/events/Event", "default")
+@:jsRequire("openfl/events/Event", "default")
 extern class Event {
 	static var COMPLETE:String;
 	var target:Dynamic;
