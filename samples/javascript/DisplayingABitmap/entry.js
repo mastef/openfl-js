@@ -1,8 +1,8 @@
-var Application = require ("openfl/src/openfl/display/Application").default;
-var Stage = require ("openfl/src/openfl/display/Stage").default;
-var Loader = require ("openfl/src/openfl/display/Loader").default;
-var URLRequest = require ("openfl/src/openfl/net/URLRequest").default;
-var Event = require ("openfl/src/openfl/events/Event").default;
+var Application = require ("openfl/display/Application").default;
+var Stage = require ("openfl/display/Stage").default;
+var Loader = require ("openfl/display/Loader").default;
+var URLRequest = require ("openfl/net/URLRequest").default;
+var Event = require ("openfl/events/Event").default;
 
 // TODO: Simpler bootstrap
 

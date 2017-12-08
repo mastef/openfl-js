@@ -2,3 +2,5 @@ node_modules
 bundle.js
 Bunny.js
 Main.js
+*.map
+entry.js
