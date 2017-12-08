@@ -1,6 +1,5 @@
 import openfl.display.BitmapData;
 import openfl.geom.Rectangle;
-import js.Browser;
 
 
 class Main {
@@ -13,7 +12,7 @@ class Main {
 		var rect = new Rectangle (50, 50, 100, 100);
 		bitmapData.fillRect (rect, 0xFFCCCCCC);
 		
-		Browser.document.body.appendChild (bitmapData.image.src);
+		js.Browser.document.body.appendChild (bitmapData.image.src);
 		trace ("Hello World");
 		
 	}
