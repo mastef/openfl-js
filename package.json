@@ -1,6 +1,6 @@
 {
 	"name": "openfl",
-	"version": "6.5.3-alpha",
+	"version": "6.5.3-alpha.1",
 	"description": "A fast, productive library for 2D cross-platform development.",
 	"keywords": [
 		"openfl",
@@ -28,6 +28,6 @@
 	},
 	"scripts": {
 		"build": "cd scripts/build && haxe build.hxml",
-		"prepublish": "cd scripts/build && haxe build.hxml"
+		"prepublish": "git clean samples -xfd && cd scripts/build && haxe build.hxml"
 	}
 }
