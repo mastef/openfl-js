@@ -4,6 +4,7 @@ Import
 -lib openfl
 -lib hxgenjs
 -D hxextern
+-D tsextern
 -D openfljs
 -D lime-opengl
 -D es5get
