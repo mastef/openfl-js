@@ -1,3 +1,8 @@
+import openfl.display.Application;
+import openfl.display.Loader;
+import openfl.display.Sprite;
+import openfl.events.Event;
+import openfl.net.URLRequest;
 import js.Browser;
 
 
@@ -94,41 +99,4 @@ class Main extends Sprite {
 	}
 	
 	
-}
-
-
-
-// TODO: Automatically generate extern classes using hxgenjs
-@:jsRequire("openfl/display/Application", "default")
-extern class Application {
-	var window:Dynamic;
-	function new ();
-	function create (config:Dynamic):Void;
-	function exec ():Int;
-}
-
-@:jsRequire("openfl/display/Sprite", "default")
-extern class Sprite {
-	var stage:Dynamic;
-	function new ();
-	function addChild (child:Dynamic):Void;
-}
-
-@:jsRequire("openfl/display/Loader", "default")
-extern class Loader {
-	var contentLoaderInfo:Dynamic;
-	function new ();
-	function load (request:URLRequest):Void;
-}
-
-@:jsRequire("openfl/net/URLRequest", "default")
-extern class URLRequest {
-	function new (url:String);
-}
-
-@:jsRequire("openfl/events/Event", "default")
-extern class Event {
-	static var COMPLETE:String;
-	var target:Dynamic;
-	function new ();
 }

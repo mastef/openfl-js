@@ -1,24 +1,9 @@
-# HACK: Generate basic TypeScript type definitions
-
--js ../../src/_.js
-Import
--lib lime
--lib openfl
--lib modular-js
--D openfljs
--D lime-opengl
--D es5get
--D html5
-
---next
-
-# Generate JS files we will use
-
 -js ../../src/_.js
 Import
 -lib lime
 -lib openfl
 -lib hxgenjs
+-D hxextern
 -D openfljs
 -D lime-opengl
 -D es5get

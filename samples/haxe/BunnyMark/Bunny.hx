@@ -1,3 +1,6 @@
+import openfl.display.Tile;
+
+
 class Bunny extends Tile {
 	
 	
@@ -12,11 +15,4 @@ class Bunny extends Tile {
 	}
 	
 	
-}
-
-
-// TODO: Generate full externs automatically
-@:jsRequire("openfl/src/openfl/display/Tile", "default")
-extern class Tile implements Dynamic {
-	function new (id:Int):Void;
 }

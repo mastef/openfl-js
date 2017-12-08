@@ -1,3 +1,12 @@
+import openfl.display.Application;
+import openfl.display.BitmapData;
+import openfl.display.Loader;
+import openfl.display.Sprite;
+import openfl.display.Tilemap;
+import openfl.display.Tileset;
+import openfl.events.Event;
+import openfl.events.MouseEvent;
+import openfl.net.URLRequest;
 import js.Browser;
 
 
@@ -216,68 +225,4 @@ class Main extends Sprite {
 	}
 	
 	
-}
-
-
-
-// TODO: Automatically generate extern classes using hxgenjs
-@:jsRequire("openfl/display/Application", "default")
-extern class Application {
-	var window:Dynamic;
-	function new ();
-	function create (config:Dynamic):Void;
-	function exec ():Int;
-}
-
-@:jsRequire("openfl/display/Sprite", "default")
-extern class Sprite {
-	var stage:Dynamic;
-	function new ();
-	function addChild (child:Dynamic):Void;
-}
-
-@:jsRequire("openfl/display/Loader", "default")
-extern class Loader {
-	var contentLoaderInfo:Dynamic;
-	var content:Dynamic;
-	function new ();
-	function load (request:URLRequest):Void;
-}
-
-@:jsRequire("openfl/net/URLRequest", "default")
-extern class URLRequest {
-	function new (url:String);
-}
-
-@:jsRequire("openfl/events/Event", "default")
-extern class Event {
-	static var COMPLETE:String;
-	static var ENTER_FRAME:String;
-	var target:Dynamic;
-	function new ();
-}
-
-@:jsRequire("openfl/events/MouseEvent", "default")
-extern class MouseEvent extends Event {
-	static var MOUSE_UP:String;
-	static var MOUSE_DOWN:String;
-	function new ();
-}
-
-@:jsRequire("openfl/display/Tilemap", "default")
-extern class Tilemap {
-	function new (width:Float, height:Float, tileset:Tileset);
-	function addTile (tile:Dynamic):Void;
-}
-
-@:jsRequire("openfl/display/Tileset", "default")
-extern class Tileset {
-	function new (bitmapData:BitmapData);
-	function addRect (rect:Dynamic):Void;
-}
-
-@:jsRequire("openfl/display/BitmapData", "default")
-extern class BitmapData {
-	var rect:Dynamic;
-	function new ();
 }

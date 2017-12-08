@@ -1,2 +1,3 @@
 -main Main
 -js entry.js
+-cp node_modules/openfl/src
