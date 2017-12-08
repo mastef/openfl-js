@@ -9,3 +9,4 @@ Import
 -D lime-opengl
 -D es5get
 -D html5
+--no-inline
