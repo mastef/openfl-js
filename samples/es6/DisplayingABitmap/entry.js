@@ -1,4 +1,4 @@
-import Application from "openfl/src/openfl/display/Application";
+import Application from "openfl/display/Application";
 import Main from "./Main";
 
 var div = document.createElement ("div");

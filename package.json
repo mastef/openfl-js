@@ -1,6 +1,6 @@
 {
 	"name": "openfl",
-	"version": "6.5.3-alpha.2",
+	"version": "6.5.3-alpha.3",
 	"description": "A fast, productive library for 2D cross-platform development.",
 	"keywords": [
 		"openfl",
@@ -14,20 +14,20 @@
 	],
 	"homepage": "http://www.openfl.org",
 	"bugs": {
-		"url" : "https://github.com/openfl/openfl-js/issues"
+		"url": "https://github.com/openfl/openfl-js/issues"
 	},
 	"license": "MIT",
 	"contributors": [
 		"Joshua Granick",
 		"Other OpenFL contributors"
 	],
-	"main": "src/openfl/index.js",
+	"main": "lib/openfl/index.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/openfl/openfl-js.git"
 	},
 	"scripts": {
 		"build": "cd scripts/build && haxe build.hxml",
-		"prepublish": "git clean samples -xfd && cd scripts/build && haxe build.hxml"
+		"prepublishOnly": "npm run build"
 	}
 }

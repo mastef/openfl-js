@@ -1,7 +1,4 @@
 *.DS_Store
-lib/**/*.js
-lib/**/*.d.ts
-lib/**/*.hx
 samples/**/package-lock.json
 package-lock.json
 npm-debug.log

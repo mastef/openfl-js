@@ -12,7 +12,7 @@ export class Main extends Sprite {
 		super ();
 		
 		var loader = new Loader ();
-		loader.contentLoaderInfo.addEventListener (Event.COMPLETE, this.loader_onComplete.bind (this));
+		loader.contentLoaderInfo.addEventListener (Event.COMPLETE, this.loader_onComplete);
 		loader.load (new URLRequest ("openfl.png"));
 		
 	}
@@ -24,7 +24,7 @@ export class Main extends Sprite {
 	
 	
 	
-	loader_onComplete (event) {
+	loader_onComplete = (event) => {
 		
 		var bitmap = event.target.loader.content;
 		bitmap.x = (this.stage.stageWidth - bitmap.width) / 2;

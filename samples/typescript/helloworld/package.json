@@ -2,11 +2,11 @@
 	"name": "helloworld",
 	"version": "1.0.0",
 	"devDependencies": {
-	  "openfl": "*",
-	  "webpack": "^3.10.0"
+		"openfl": "*",
+		"webpack": "^3.10.0"
 	},
 	"scripts": {
-	  "build": "tsc -p tsconfig.json && webpack --devtool source-map entry.js bundle.js",
-	  "test": "npm run build && http-server -c-1 --cors"
+		"build": "tsc -p tsconfig.json && webpack --devtool source-map entry.js bundle.js",
+		"test": "npm run build && http-server -c-1 --cors"
 	}
-  }
+}

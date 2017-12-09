@@ -1,4 +1,4 @@
--js ../../src/_.js
+-js ../../lib/_.js
 Import
 -lib lime
 -lib openfl

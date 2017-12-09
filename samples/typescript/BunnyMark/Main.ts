@@ -59,9 +59,9 @@ export class Main extends Sprite {
 		// fps = new FPS ();
 		// addChild (fps);
 		
-		this.stage.addEventListener (MouseEvent.MOUSE_DOWN, this.stage_onMouseDown.bind (this));
-		this.stage.addEventListener (MouseEvent.MOUSE_UP, this.stage_onMouseUp.bind (this));
-		this.stage.addEventListener (Event.ENTER_FRAME, this.stage_onEnterFrame.bind (this));
+		this.stage.addEventListener (MouseEvent.MOUSE_DOWN, this.stage_onMouseDown);
+		this.stage.addEventListener (MouseEvent.MOUSE_UP, this.stage_onMouseUp);
+		this.stage.addEventListener (Event.ENTER_FRAME, this.stage_onEnterFrame);
 		
 		for (var i = 0; i < 10; i++) {
 			
@@ -92,7 +92,7 @@ export class Main extends Sprite {
 	
 	
 	
-	stage_onEnterFrame (event:Event):void {
+	stage_onEnterFrame = (event:Event) => {
 		
 		for (var i = 0; i < this.bunnies.length; i++) {
 			
@@ -146,14 +146,14 @@ export class Main extends Sprite {
 	}
 	
 	
-	private stage_onMouseDown (event:MouseEvent):void {
+	private stage_onMouseDown = (event:MouseEvent) => {
 		
 		this.addingBunnies = true;
 		
 	}
 	
 	
-	private stage_onMouseUp (event:MouseEvent):void {
+	private stage_onMouseUp = (event:MouseEvent) => {
 		
 		this.addingBunnies = false;
 		console.log (this.bunnies.length + " bunnies");

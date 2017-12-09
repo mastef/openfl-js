@@ -3,7 +3,7 @@
 		"target": "es5",
 		"baseUrl": ".",
 		"paths": {
-			"openfl/*": ["node_modules/openfl/src/openfl/*"]
+			"openfl/*": ["node_modules/openfl/lib/openfl/*"]
 		}
 	},
 	"files": [

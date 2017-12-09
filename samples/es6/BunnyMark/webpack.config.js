@@ -1,7 +1,7 @@
 module.exports = {
 	resolve: {
 		alias: {
-			"openfl": "openfl/src/openfl"
+			"openfl": "openfl/lib/openfl"
 		}
 	}
 };
