@@ -12,37 +12,25 @@ import Bunny from "./Bunny";
 export class Main extends Sprite {
 	
 	
-	private addingBunnies:boolean;
-	private bunnies:Array<Bunny>;
-	//private fps:FPS;
-	private gravity:number;
-	private minX:number;
-	private minY:number;
-	private maxX:number;
-	private maxY:number;
-	private tilemap:Tilemap;
-	private tileset:Tileset;
-	
-	
 	constructor () {
 		
 		super ();
 		
+		this.addingBunnies = false;
 		this.bunnies = [];
-		var self = this;
 		
-		//addEventListener (Event.ADDED_TO_STAGE, function (_) {
+		this.addEventListener (Event.ADDED_TO_STAGE, () => {
 			var loader = new Loader ();
-			loader.contentLoaderInfo.addEventListener (Event.COMPLETE, function (event) {
-				self.start (loader.content.bitmapData);
+			loader.contentLoaderInfo.addEventListener (Event.COMPLETE, (event) => {
+				this.start (loader.content.bitmapData);
 			});
 			loader.load (new URLRequest ("wabbit_alpha.png"));
-		//});
+		});
 		
 	}
 	
 	
-	private start (bitmapData:BitmapData):void {
+	start (bitmapData) {
 		
 		this.minX = 0;
 		this.maxX = this.stage.stageWidth;
@@ -73,7 +61,7 @@ export class Main extends Sprite {
 	}
 	
 	
-	private addBunny ():void {
+	addBunny () {
 		
 		var bunny = new Bunny ();
 		bunny.x = 0;
@@ -93,7 +81,7 @@ export class Main extends Sprite {
 	
 	
 	
-	stage_onEnterFrame (event:Event):void {
+	stage_onEnterFrame (event) {
 		
 		for (var i = 0; i < this.bunnies.length; i++) {
 			
@@ -147,14 +135,14 @@ export class Main extends Sprite {
 	}
 	
 	
-	private stage_onMouseDown (event:MouseEvent):void {
+	stage_onMouseDown (event) {
 		
 		this.addingBunnies = true;
 		
 	}
 	
 	
-	private stage_onMouseUp (event:MouseEvent):void {
+	stage_onMouseUp (event) {
 		
 		this.addingBunnies = false;
 		console.log (this.bunnies.length + " bunnies");
