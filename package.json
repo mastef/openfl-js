@@ -35,5 +35,6 @@
 		"docker-build-clean":			"docker build --no-cache -t openfl/openfl_js .",
 
 		"docker-test-clean":			"docker ps -a -q --filter \"name=openfljs_test_$TESTNAME\" | xargs docker stop | xargs docker rm -fv",
+		"docker-tests-clean":			"docker ps -a -q --filter \"name=openfljs_test_*\" | xargs docker stop | xargs docker rm -fv",
 	}
 }
