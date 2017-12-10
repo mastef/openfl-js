@@ -30,47 +30,47 @@
 		"cross-env": "*"
 	},
 	"scripts": {
-		"build":						"cd scripts/build && haxe build.hxml",
-		"prepublishOnly":				"npm run build",
+		"build":                        "cd scripts/build && haxe build.hxml",
+		"prepublishOnly":               "npm run build",
 
-		"docker-build":					"if [[ \"$(docker images -q openfl/openfl_js)\" == \"\" ]]; then docker build -t openfl/openfl_js .; fi",
-		"docker-rebuild":				"docker build -t openfl/openfl_js .",
-		"docker-build-clean":			"docker build --no-cache -t openfl/openfl_js .",
+		"docker-build":                 "if [[ \"$(docker images -q openfl/openfl_js)\" == \"\" ]]; then docker build -t openfl/openfl_js .; fi",
+		"docker-rebuild":               "docker build -t openfl/openfl_js .",
+		"docker-build-clean":           "docker build --no-cache -t openfl/openfl_js .",
 
-		"docker-test-build":			"npm run docker-test-clean && docker build -t openfl/openfl_js_test_$TESTNAME $TESTDIR && npm run docker-test-run",
+		"docker-test-build":            "npm run docker-test-clean && docker build -t openfl/openfl_js_test_$TESTNAME $TESTDIR && npm run docker-test-run",
 
-		"docker-test-run":				"docker run -d --name openfljs_test_$TESTNAME -p 8080 openfl/openfl_js_test_$TESTNAME && npm run docker-test-running",
-		"docker-test-running":			"sleep 3 && if [[ `docker inspect -f {{.State.Running}} openfljs_test_$TESTNAME` == \"false\" ]]; then docker logs openfljs_test_$TESTNAME ; else npm run docker-tests-list ; fi",
+		"docker-test-run":              "docker run -d --name openfljs_test_$TESTNAME -p 8080 openfl/openfl_js_test_$TESTNAME && npm run docker-test-running",
+		"docker-test-running":          "sleep 3 && if [[ `docker inspect -f {{.State.Running}} openfljs_test_$TESTNAME` == \"false\" ]]; then docker logs openfljs_test_$TESTNAME ; else npm run docker-tests-list ; fi",
 
-		"docker-test-clean":			"docker ps -a -q --filter \"name=openfljs_test_$TESTNAME\" | xargs docker stop | xargs docker rm -fv",
-		"docker-tests-clean":			"docker ps -a -q --filter \"name=openfljs_test_*\" | xargs docker stop | xargs docker rm -fv",
-		"docker-tests-list":			"docker ps --format='{{.Names}} {{.Ports}}' --filter 'name=openfljs_test_*' | awk -F'[->]' '{print $1}' | awk -F'[ ]' '{print \"http://\" $2 \" runs \"$1 }' && echo && echo after you\\'re finished run : npm run docker-tests-clean",
+		"docker-test-clean":            "docker ps -a -q --filter \"name=openfljs_test_$TESTNAME\" | xargs docker stop | xargs docker rm -fv",
+		"docker-tests-clean":           "docker ps -a -q --filter \"name=openfljs_test_*\" | xargs docker stop | xargs docker rm -fv",
+		"docker-tests-list":            "docker ps --format='{{.Names}} {{.Ports}}' --filter 'name=openfljs_test_*' | awk -F'[->]' '{print $1}' | awk -F'[ ]' '{print \"http://\" $2 \" runs \"$1 }' && echo && echo after you\\'re finished run : npm run docker-tests-clean",
 
-		"test-es5-helloworld":			"cross-env TESTNAME=es5_helloworld TESTDIR=samples/es5/helloworld npm run docker-test-build",
-		"test-es5-displayingabitmap":	"cross-env TESTNAME=es5_displayingabitmap TESTDIR=samples/es5/DisplayingABitmap npm run docker-test-build",
-		"test-es5-bunnymark":			"cross-env TESTNAME=es5_bunnymark TESTDIR=samples/es5/BunnyMark npm run docker-test-build",
+		"test-es5-helloworld":          "cross-env TESTNAME=es5_helloworld TESTDIR=samples/es5/helloworld npm run docker-test-build",
+		"test-es5-displayingabitmap":   "cross-env TESTNAME=es5_displayingabitmap TESTDIR=samples/es5/DisplayingABitmap npm run docker-test-build",
+		"test-es5-bunnymark":           "cross-env TESTNAME=es5_bunnymark TESTDIR=samples/es5/BunnyMark npm run docker-test-build",
 
-		"test-es5-all":					"npm run test-es5-helloworld && npm run test-es5-displayingabitmap && npm run test-es5-bunnymark",
+		"test-es5-all":                 "npm run test-es5-helloworld && npm run test-es5-displayingabitmap && npm run test-es5-bunnymark",
 
-		"test-es6-helloworld":			"cross-env TESTNAME=es6_helloworld TESTDIR=samples/es6/helloworld npm run docker-test-build",
-		"test-es6-displayingabitmap":	"cross-env TESTNAME=es6_displayingabitmap TESTDIR=samples/es6/DisplayingABitmap npm run docker-test-build",
-		"test-es6-bunnymark":			"cross-env TESTNAME=es6_bunnymark TESTDIR=samples/es6/BunnyMark npm run docker-test-build",
+		"test-es6-helloworld":          "cross-env TESTNAME=es6_helloworld TESTDIR=samples/es6/helloworld npm run docker-test-build",
+		"test-es6-displayingabitmap":   "cross-env TESTNAME=es6_displayingabitmap TESTDIR=samples/es6/DisplayingABitmap npm run docker-test-build",
+		"test-es6-bunnymark":           "cross-env TESTNAME=es6_bunnymark TESTDIR=samples/es6/BunnyMark npm run docker-test-build",
 
-		"test-es6-all":					"npm run test-es6-helloworld && npm run test-es6-displayingabitmap && npm run test-es6-bunnymark",
+		"test-es6-all":                 "npm run test-es6-helloworld && npm run test-es6-displayingabitmap && npm run test-es6-bunnymark",
 
-		"test-haxe-helloworld":			"cross-env TESTNAME=haxe_helloworld TESTDIR=samples/haxe/helloworld npm run docker-test-build",
-		"test-haxe-displayingabitmap":	"cross-env TESTNAME=haxe_displayingabitmap TESTDIR=samples/haxe/DisplayingABitmap npm run docker-test-build",
-		"test-haxe-bunnymark":			"cross-env TESTNAME=haxe_bunnymark TESTDIR=samples/haxe/BunnyMark npm run docker-test-build",
+		"test-haxe-helloworld":         "cross-env TESTNAME=haxe_helloworld TESTDIR=samples/haxe/helloworld npm run docker-test-build",
+		"test-haxe-displayingabitmap":  "cross-env TESTNAME=haxe_displayingabitmap TESTDIR=samples/haxe/DisplayingABitmap npm run docker-test-build",
+		"test-haxe-bunnymark":          "cross-env TESTNAME=haxe_bunnymark TESTDIR=samples/haxe/BunnyMark npm run docker-test-build",
 
-		"test-haxe-all":				"npm run test-haxe-helloworld && npm run test-haxe-displayingabitmap && npm run test-haxe-bunnymark",
+		"test-haxe-all":                "npm run test-haxe-helloworld && npm run test-haxe-displayingabitmap && npm run test-haxe-bunnymark",
 
-		"test-ts-helloworld":			"cross-env TESTNAME=ts_helloworld TESTDIR=samples/typescript/helloworld npm run docker-test-build",
-		"test-ts-displayingabitmap":	"cross-env TESTNAME=ts_displayingabitmap TESTDIR=samples/typescript/DisplayingABitmap npm run docker-test-build",
-		"test-ts-bunnymark":			"cross-env TESTNAME=ts_bunnymark TESTDIR=samples/typescript/BunnyMark npm run docker-test-build",
+		"test-ts-helloworld":           "cross-env TESTNAME=ts_helloworld TESTDIR=samples/typescript/helloworld npm run docker-test-build",
+		"test-ts-displayingabitmap":    "cross-env TESTNAME=ts_displayingabitmap TESTDIR=samples/typescript/DisplayingABitmap npm run docker-test-build",
+		"test-ts-bunnymark":            "cross-env TESTNAME=ts_bunnymark TESTDIR=samples/typescript/BunnyMark npm run docker-test-build",
 
-		"test-ts-all":					"npm run test-ts-helloworld && npm run test-ts-displayingabitmap && npm run test-ts-bunnymark",
+		"test-ts-all":                  "npm run test-ts-helloworld && npm run test-ts-displayingabitmap && npm run test-ts-bunnymark",
 
-		"test-all":						"npm run test-es5-all && npm run test-es6-all && npm run test-haxe-all && npm run test-ts-all"
+		"test-all":                     "npm run test-es5-all && npm run test-es6-all && npm run test-haxe-all && npm run test-ts-all"
 
 	}
 }
