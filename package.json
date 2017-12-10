@@ -63,5 +63,7 @@
 
 		"test-haxe-all":				"npm run test-haxe-helloworld && npm run test-haxe-displayingabitmap && npm run test-haxe-bunnymark",
 
+		"test-all":						"npm run test-es5-all && npm run test-es6-all && npm run test-haxe-all"
+
 	}
 }
