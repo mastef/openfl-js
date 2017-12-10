@@ -36,5 +36,7 @@
 
 		"docker-test-clean":			"docker ps -a -q --filter \"name=openfljs_test_$TESTNAME\" | xargs docker stop | xargs docker rm -fv",
 		"docker-tests-clean":			"docker ps -a -q --filter \"name=openfljs_test_*\" | xargs docker stop | xargs docker rm -fv",
+		"docker-tests-list":			"docker ps --format='{{.Names}} {{.Ports}}' --filter 'name=openfljs_test_*' | awk -F'[->]' '{print $1}' | awk -F'[ ]' '{print \"http://\" $2 \" runs \"$1 }' && echo && echo after you\\'re finished run : npm run docker-tests-clean",
+
 	}
 }
