@@ -34,6 +34,8 @@
 		"docker-rebuild":				"docker build -t openfl/openfl_js .",
 		"docker-build-clean":			"docker build --no-cache -t openfl/openfl_js .",
 
+		"docker-test-run":				"docker run -d --name openfljs_test_$TESTNAME -p 8080 openfl/openfl_js_test_$TESTNAME && npm run docker-tests-list",
+
 		"docker-test-clean":			"docker ps -a -q --filter \"name=openfljs_test_$TESTNAME\" | xargs docker stop | xargs docker rm -fv",
 		"docker-tests-clean":			"docker ps -a -q --filter \"name=openfljs_test_*\" | xargs docker stop | xargs docker rm -fv",
 		"docker-tests-list":			"docker ps --format='{{.Names}} {{.Ports}}' --filter 'name=openfljs_test_*' | awk -F'[->]' '{print $1}' | awk -F'[ ]' '{print \"http://\" $2 \" runs \"$1 }' && echo && echo after you\\'re finished run : npm run docker-tests-clean",
