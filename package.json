@@ -27,7 +27,12 @@
 		"url": "https://github.com/openfl/openfl-js.git"
 	},
 	"scripts": {
-		"build": "cd scripts/build && haxe build.hxml",
-		"prepublishOnly": "npm run build"
+		"build":						"cd scripts/build && haxe build.hxml",
+		"prepublishOnly":				"npm run build",
+
+		"docker-build":					"if [[ \"$(docker images -q openfl/openfl_js)\" == \"\" ]]; then docker build -t openfl/openfl_js .; fi",
+		"docker-rebuild":				"docker build -t openfl/openfl_js .",
+		"docker-build-clean":			"docker build --no-cache -t openfl/openfl_js .",
+
 	}
 }
