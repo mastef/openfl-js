@@ -64,7 +64,13 @@
 
 		"test-haxe-all":				"npm run test-haxe-helloworld && npm run test-haxe-displayingabitmap && npm run test-haxe-bunnymark",
 
-		"test-all":						"npm run test-es5-all && npm run test-es6-all && npm run test-haxe-all"
+		"test-ts-helloworld":			"cross-env TESTNAME=ts_helloworld TESTDIR=samples/typescript/helloworld npm run docker-test-build",
+		"test-ts-displayingabitmap":	"cross-env TESTNAME=ts_displayingabitmap TESTDIR=samples/typescript/DisplayingABitmap npm run docker-test-build",
+		"test-ts-bunnymark":			"cross-env TESTNAME=ts_bunnymark TESTDIR=samples/typescript/BunnyMark npm run docker-test-build",
+
+		"test-ts-all":					"npm run test-ts-helloworld && npm run test-ts-displayingabitmap && npm run test-ts-bunnymark",
+
+		"test-all":						"npm run test-es5-all && npm run test-es6-all && npm run test-haxe-all && npm run test-ts-all"
 
 	}
 }
