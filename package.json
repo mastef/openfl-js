@@ -51,5 +51,11 @@
 
 		"test-es5-all":					"npm run test-es5-helloworld && npm run test-es5-displayingabitmap && npm run test-es5-bunnymark",
 
+		"test-es6-helloworld":			"cross-env TESTNAME=es6_helloworld TESTDIR=samples/es6/helloworld npm run docker-test-build",
+		"test-es6-displayingabitmap":	"cross-env TESTNAME=es6_displayingabitmap TESTDIR=samples/es6/DisplayingABitmap npm run docker-test-build",
+		"test-es6-bunnymark":			"cross-env TESTNAME=es6_bunnymark TESTDIR=samples/es6/BunnyMark npm run docker-test-build",
+
+		"test-es6-all":					"npm run test-es6-helloworld && npm run test-es6-displayingabitmap && npm run test-es6-bunnymark",
+
 	}
 }
