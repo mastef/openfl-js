@@ -57,5 +57,11 @@
 
 		"test-es6-all":					"npm run test-es6-helloworld && npm run test-es6-displayingabitmap && npm run test-es6-bunnymark",
 
+		"test-haxe-helloworld":			"cross-env TESTNAME=haxe_helloworld TESTDIR=samples/haxe/helloworld npm run docker-test-build",
+		"test-haxe-displayingabitmap":	"cross-env TESTNAME=haxe_displayingabitmap TESTDIR=samples/haxe/DisplayingABitmap npm run docker-test-build",
+		"test-haxe-bunnymark":			"cross-env TESTNAME=haxe_bunnymark TESTDIR=samples/haxe/BunnyMark npm run docker-test-build",
+
+		"test-haxe-all":				"npm run test-haxe-helloworld && npm run test-haxe-displayingabitmap && npm run test-haxe-bunnymark",
+
 	}
 }
